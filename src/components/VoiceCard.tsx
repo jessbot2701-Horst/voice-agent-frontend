@@ -1,4 +1,4 @@
-import React, {useState} from react
+import React, {useState} from 'react'
 
 export default function VoiceCard(){
   const [playing, setPlaying] = useState(false)
@@ -6,7 +6,7 @@ export default function VoiceCard(){
 
   const handlePlay = async ()=>{
     if(!audioRef.current){
-      audioRef.current = new Audio(/welcome.mp3)
+      audioRef.current = new Audio('/welcome.mp3')
       audioRef.current.onended = ()=> setPlaying(false)
     }
     if(playing){
@@ -30,7 +30,7 @@ export default function VoiceCard(){
           <p className="text-gray-300 mt-1">Dein personalisierter Voice Agent spricht dich beim Vornamen an.</p>
         </div>
         <div className="flex items-center gap-3">
-          <button onClick={handlePlay} className="px-4 py-2 bg-green-500 hover:bg-green-400 text-black rounded-md">{playing? Pause : Play}</button>
+          <button onClick={handlePlay} className="px-4 py-2 bg-green-500 hover:bg-green-400 text-black rounded-md">{playing ? 'Pause' : 'Play'}</button>
           <a href="https://elevenlabs.io" target="_blank" rel="noreferrer" className="text-sm text-green-300 underline">ElevenLabs</a>
         </div>
       </div>
