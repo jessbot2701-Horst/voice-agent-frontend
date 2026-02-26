@@ -1,5 +1,5 @@
-import React from react
-import VoiceCard from ./components/VoiceCard
+import React from 'react'
+import VoiceCard from './components/VoiceCard'
 
 export default function App(){
   return (
